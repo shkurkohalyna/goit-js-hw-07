@@ -6,19 +6,26 @@ const ingredients = [
     'Зелень',
     'Приправы',
   ];
-for (let i = 0; i < ingredients.length; i+=1) {
-    const ingredient = ingredients[i];
-    const newListEl = document.createElement('li');
 
-    ingredients.push(newListEl);
-}
-  
-  
-//   newListEl.textContent = 
-  
-  console.log(ingredients);
-  
-  
-  
-  const listEl = document.querySelector('ul');
-  listEl.append(...ingredients);
+const newIngredients = (...ingredients)=>
+  newIngredients.map( item => {
+  const newListEl = document.createElement('li');
+  newListEl.textContent = item; 
+  return newListEl;
+});
+
+console.log(newIngredients);
+
+
+const listEl = document.querySelector('ul');
+  listEl.append(ingredients);
+
+
+
+    //            Працює і так само без map
+
+    
+// const listEl = document.querySelector('ul');
+//   listEl.append(...ingredients);
+
+// console.log(listEl);

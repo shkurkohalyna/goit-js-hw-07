@@ -21,6 +21,6 @@ const newIm = images.reduce((acc, { url, alt }) => {
     acc += `<li class='galery__item'><img class='galery__img' src='${url}' alt='${alt}'></li>`;
     return acc;
 }, ' ');
-
+picture.classList.add('galery__item');
 picture.insertAdjacentHTML('afterbegin', newIm);
 
